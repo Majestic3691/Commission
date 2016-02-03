@@ -41,5 +41,17 @@
     <ApplicationNavigationMethodLink
       Name="link1"
       Method="!module/Methods[showBrowseProductGroup]" />
+    <ApplicationNavigationMethodLink
+      Name="link2"
+      Method="!module/Methods[showBrowseSalesman]" />
+    <ApplicationNavigationMethodLink
+      Name="link3"
+      Method="!module/Methods[showBrowsePayoutHistory1]" />
+    <ApplicationNavigationMethodLink
+      Name="link4"
+      Method="!module/Methods[showBrowseCategoryGroup]" />
+    <ApplicationNavigationMethodLink
+      Name="link5"
+      Method="!module/Methods[showBrowseProductCategories1]" />
   </Application.NavigationItems>
 </Application>

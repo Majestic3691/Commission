@@ -10,24 +10,6 @@
         Target="ServiceInterface:ApplicationData" />
     </EntityContainer.Attributes>
   </EntityContainer>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:SalesmanItem" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:CategoryGroupItem" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:ProductCategory" />
-    </EntityType.Attributes>
-  </EntityType>
   <Association>
     <Association.Attributes>
       <Proxy
@@ -40,12 +22,6 @@
         Target="ServiceInterface:ProductCategoryItem_CategoryGroupItem" />
     </Association.Attributes>
   </Association>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:PayoutHistoryItem" />
-    </EntityType.Attributes>
-  </EntityType>
   <EntityType>
     <EntityType.Attributes>
       <Proxy

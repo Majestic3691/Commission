@@ -5,10 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="AddEditPayoutHistoryItem">
+    Name="AddEditProductCategory1">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="ApplicationData" />
+      <DisplayName
+        Value="ProductCategory" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -30,7 +32,7 @@
             <ContentItem
               Name="columns"
               Kind="Details"
-              DataType="PayoutHistoryItem"
+              DataType="ProductCategory"
               View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem.Attributes>
                 <DisplayName
@@ -40,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="AddEditPayoutHistoryItem/Properties[PayoutHistoryItem]" />
+                      Member="AddEditProductCategory1/Properties[ProductCategory]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -48,27 +50,14 @@
                 Name="left"
                 Kind="Group">
                 <ContentItem
-                  Name="DealerID"
+                  Name="Name"
                   Kind="Value"
-                  DataType=":Int32">
+                  DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="PayoutHistoryItem/Properties[DealerID]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="GroupCategoryCostPerUnit"
-                  Kind="Value"
-                  DataType=":Decimal">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="PayoutHistoryItem/Properties[GroupCategoryCostPerUnit]" />
+                          Member="ProductCategory/Properties[Name]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -100,27 +89,14 @@
                 Name="right"
                 Kind="Group">
                 <ContentItem
-                  Name="TransactionTimestamp"
+                  Name="Description"
                   Kind="Value"
-                  DataType=":DateTime">
+                  DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="PayoutHistoryItem/Properties[TransactionTimestamp]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="UnitCount"
-                  Kind="Value"
-                  DataType=":Int32">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="PayoutHistoryItem/Properties[UnitCount]" />
+                          Member="ProductCategory/Properties[Description]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -205,8 +181,8 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty
-        Name="PayoutHistoryItem"
-        PropertyType="PayoutHistoryItem">
+        Name="ProductCategory"
+        PropertyType="ProductCategory">
         <ScreenProperty.Attributes>
           <IsParameter />
         </ScreenProperty.Attributes>
@@ -215,14 +191,14 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showAddEditPayoutHistoryItem">
+      Name="showAddEditProductCategory1">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="AddEditPayoutHistoryItem" />
+          TargetScreen="AddEditProductCategory1" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
-        Name="PayoutHistoryItem"
-        ParameterType="PayoutHistoryItem" />
+        Name="ProductCategory"
+        ParameterType="ProductCategory" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>

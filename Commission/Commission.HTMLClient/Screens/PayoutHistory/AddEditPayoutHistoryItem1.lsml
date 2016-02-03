@@ -5,10 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="AddEditCategoryGroupItem">
+    Name="AddEditPayoutHistoryItem1">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="ApplicationData" />
+      <DisplayName
+        Value="PayoutHistoryItem" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -30,7 +32,7 @@
             <ContentItem
               Name="columns"
               Kind="Details"
-              DataType="CategoryGroupItem"
+              DataType="PayoutHistoryItem"
               View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem.Attributes>
                 <DisplayName
@@ -40,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="AddEditCategoryGroupItem/Properties[CategoryGroupItem]" />
+                      Member="AddEditPayoutHistoryItem1/Properties[PayoutHistoryItem]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -48,27 +50,27 @@
                 Name="left"
                 Kind="Group">
                 <ContentItem
-                  Name="ProductCategory"
+                  Name="DealerID"
                   Kind="Value"
                   DataType=":Int32">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="CategoryGroupItem/Properties[ProductCategory]" />
+                          Member="PayoutHistoryItem/Properties[DealerID]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="ProductGroup"
+                  Name="GroupCategoryCostPerUnit"
                   Kind="Value"
-                  DataType=":Int32">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="CategoryGroupItem/Properties[ProductGroup]" />
+                          Member="PayoutHistoryItem/Properties[GroupCategoryCostPerUnit]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -100,50 +102,30 @@
                 Name="right"
                 Kind="Group">
                 <ContentItem
-                  Name="ProductCategory1"
-                  Kind="Details"
-                  DataType="ProductCategory">
+                  Name="TransactionTimestamp"
+                  Kind="Value"
+                  DataType=":DateTime">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="CategoryGroupItem/Properties[ProductCategory1]" />
+                          Member="PayoutHistoryItem/Properties[TransactionTimestamp]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate"
-                    Kind="Details"
-                    DataType="ProductCategory">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
                 </ContentItem>
                 <ContentItem
-                  Name="ProductCategoryItem"
-                  Kind="Details"
-                  DataType="ProductCategoryItem">
+                  Name="UnitCount"
+                  Kind="Value"
+                  DataType=":Int32">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="CategoryGroupItem/Properties[ProductCategoryItem]" />
+                          Member="PayoutHistoryItem/Properties[UnitCount]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate1"
-                    Kind="Details"
-                    DataType="ProductCategoryItem">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
                 </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -225,8 +207,8 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty
-        Name="CategoryGroupItem"
-        PropertyType="CategoryGroupItem">
+        Name="PayoutHistoryItem"
+        PropertyType="PayoutHistoryItem">
         <ScreenProperty.Attributes>
           <IsParameter />
         </ScreenProperty.Attributes>
@@ -235,14 +217,14 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showAddEditCategoryGroupItem">
+      Name="showAddEditPayoutHistoryItem1">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="AddEditCategoryGroupItem" />
+          TargetScreen="AddEditPayoutHistoryItem1" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
-        Name="CategoryGroupItem"
-        ParameterType="CategoryGroupItem" />
+        Name="PayoutHistoryItem"
+        ParameterType="PayoutHistoryItem" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>

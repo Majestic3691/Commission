@@ -69,11 +69,23 @@
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
     <Content Include="packages.config" />
+    <Content Include="Screens\CategoryGroup\ViewCategoryGroupItem.lsml.js">
+      <DependentUpon>ViewCategoryGroupItem.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\PayoutHistory\ViewPayoutHistoryItem1.lsml.js">
+      <DependentUpon>ViewPayoutHistoryItem1.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ProductCategories\ViewProductCategory1.lsml.js">
+      <DependentUpon>ViewProductCategory1.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\ProductGroup\ViewProductGroupItem.lsml.js">
       <DependentUpon>ViewProductGroupItem.lsml</DependentUpon>
     </Content>
     <Content Include="Screens\Product\ViewProductCategoryItem.lsml.js">
       <DependentUpon>ViewProductCategoryItem.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Salesman\ViewSalesmanItem.lsml.js">
+      <DependentUpon>ViewSalesmanItem.lsml</DependentUpon>
     </Content>
     <Content Include="Scripts\datajs-1.1.3.js" />
     <Content Include="Scripts\datajs-1.1.3.min.js" />
@@ -96,20 +108,35 @@
     </ServiceMetadataReference>
   </ItemGroup>
   <ItemGroup>
+    <LightSwitchModel Include="Properties\ApplicationData\CategoryGroup.lsml" />
+    <LightSwitchModel Include="Properties\ApplicationData\PayoutHistory.lsml" />
     <LightSwitchModel Include="Properties\ApplicationData\Product.lsml" />
+    <LightSwitchModel Include="Properties\ApplicationData\ProductCategories.lsml" />
     <LightSwitchModel Include="Properties\ApplicationData\ProductGroup.lsml" />
+    <LightSwitchModel Include="Properties\ApplicationData\Salesman.lsml" />
     <LightSwitchModel Include="Properties\Client.lsml">
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
     <LightSwitchModel Include="Properties\Proxies.lsml" />
-    <LightSwitchModel Include="Screens\AddEditCategoryGroupItem.lsml" />
-    <LightSwitchModel Include="Screens\AddEditPayoutHistoryItem.lsml" />
+    <LightSwitchModel Include="Screens\CategoryGroup\AddEditCategoryGroupItem.lsml" />
+    <LightSwitchModel Include="Screens\CategoryGroup\BrowseCategoryGroup.lsml" />
+    <LightSwitchModel Include="Screens\CategoryGroup\ViewCategoryGroupItem.lsml" />
+    <LightSwitchModel Include="Screens\PayoutHistory\AddEditPayoutHistoryItem1.lsml" />
+    <LightSwitchModel Include="Screens\PayoutHistory\BrowsePayoutHistory1.lsml" />
+    <LightSwitchModel Include="Screens\PayoutHistory\ViewPayoutHistoryItem1.lsml" />
+    <LightSwitchModel Include="Screens\ProductCategories\AddEditProductCategory1.lsml" />
+    <LightSwitchModel Include="Screens\ProductCategories\BrowseProductCategories1.lsml" />
+    <LightSwitchModel Include="Screens\ProductCategories\ViewProductCategory1.lsml" />
     <LightSwitchModel Include="Screens\ProductGroup\AddEditProductGroupItem.lsml" />
     <LightSwitchModel Include="Screens\ProductGroup\BrowseProductGroup.lsml" />
     <LightSwitchModel Include="Screens\ProductGroup\ViewProductGroupItem.lsml" />
+    <LightSwitchModel Include="Screens\Product\AddEditProductCategory.lsml" />
     <LightSwitchModel Include="Screens\Product\AddEditProductCategoryItem.lsml" />
     <LightSwitchModel Include="Screens\Product\BrowseProduct.lsml" />
     <LightSwitchModel Include="Screens\Product\ViewProductCategoryItem.lsml" />
+    <LightSwitchModel Include="Screens\Salesman\AddEditSalesmanItem.lsml" />
+    <LightSwitchModel Include="Screens\Salesman\BrowseSalesman.lsml" />
+    <LightSwitchModel Include="Screens\Salesman\ViewSalesmanItem.lsml" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">
